@@ -163,6 +163,8 @@ export default function Home() {
         <span className="contact-links">
           <a href="mailto:robert.wegner@kit.edu">robert.wegner@kit.edu ↗</a>
           <a href="mailto:robert.wegner4@outlook.de">robert.wegner4@outlook.de ↗</a>
+          <a href="https://github.com/Robert-Wegner">GitHub ↗</a>
+          <a href="https://www.waves.kit.edu/people_robertwegner.php">KIT ↗</a>
         </span>
       </footer>
     </main>
