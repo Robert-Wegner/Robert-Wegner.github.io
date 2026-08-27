@@ -78,6 +78,7 @@ const projects: Item[] = [
   { year: '01', title: 'simPDE ↗', detail: 'A web app for simulating a range of partial differential equations.', links: [{ label: 'Visit', href: 'https://robert-wegner.github.io/simpde/' }] },
   { year: '02', title: 'Quickdice ↗', detail: 'An Owlbear Rodeo extension for fast, command-style dice rolls.', links: [{ label: 'Visit', href: 'https://github.com/Robert-Wegner/quickdice' }] },
   { year: '03', title: 'Steiner symmetrization ↗', detail: 'An interactive page for exploring Steiner symmetrization.', links: [{ label: 'Visit', href: 'https://robert-wegner.github.io/steiner-symmetrization/' }] },
+  { year: '04', title: 'Hologram ↗', detail: 'Proof-of-concept software for turning an ordinary screen into a rudimentary holographic display.', links: [{ label: 'Visit', href: 'https://github.com/Robert-Wegner/hologram' }] },
 ];
 
 const talks: Item[] = [
@@ -146,7 +147,7 @@ export default function Home() {
       </section>
 
       <section className="section" id="projects">
-        <p className="section-label">Projects</p>
+        <p className="section-label">Projects for fun</p>
         <div className="publication-list">
           {projects.map((project) => (
             <article className="publication other-entry" key={project.title}>
