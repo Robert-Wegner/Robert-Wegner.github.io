@@ -64,13 +64,11 @@ const sections: { title: string; items: Item[] }[] = [
       },
     ],
   },
-  {
-    title: 'Other',
-    items: [
-      { year: '01', title: 'simPDE ↗', detail: 'A web app for simulating a range of partial differential equations.', links: [{ label: 'Visit', href: 'https://robert-wegner.github.io/simpde/' }] },
-      { year: '02', title: 'Quickdice ↗', detail: 'An Owlbear Rodeo extension for fast, command-style dice rolls.', links: [{ label: 'Visit', href: 'https://github.com/Robert-Wegner/quickdice' }] },
-    ],
-  },
+];
+
+const projects: Item[] = [
+  { year: '01', title: 'simPDE ↗', detail: 'A web app for simulating a range of partial differential equations.', links: [{ label: 'Visit', href: 'https://robert-wegner.github.io/simpde/' }] },
+  { year: '02', title: 'Quickdice ↗', detail: 'An Owlbear Rodeo extension for fast, command-style dice rolls.', links: [{ label: 'Visit', href: 'https://github.com/Robert-Wegner/quickdice' }] },
 ];
 
 export default function Home() {
@@ -105,13 +103,26 @@ export default function Home() {
             <div key={section.title}>
               <h2 className="category">{section.title}</h2>
               {section.items.map((item) => (
-                <article className={`publication${section.title === 'Other' ? ' other-entry' : ''}`} key={item.title}>
+                <article className="publication" key={item.title}>
                   <span className="year">{item.year}</span>
                   <div><h2>{item.title}</h2><p>{item.detail}</p></div>
                   {item.links && <div className="links">{item.links.map((link) => <a key={link.href} href={link.href}>{link.label} ↗</a>)}</div>}
                 </article>
               ))}
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="projects">
+        <p className="section-label">Projects</p>
+        <div className="publication-list">
+          {projects.map((project) => (
+            <article className="publication other-entry" key={project.title}>
+              <span className="year">{project.year}</span>
+              <div><h2>{project.title}</h2><p>{project.detail}</p></div>
+              <div className="links">{project.links?.map((link) => <a key={link.href} href={link.href}>{link.label} ↗</a>)}</div>
+            </article>
           ))}
         </div>
       </section>
