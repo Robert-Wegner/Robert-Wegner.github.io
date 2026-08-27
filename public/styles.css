@@ -18,9 +18,10 @@ h1 { margin:0; font:400 clamp(28px,2.8vw,36px)/1 Georgia,'Times New Roman',serif
 .category:first-child { margin-top:0; }
 .publication { display:grid; grid-template-columns:58px minmax(0,1fr) 165px; gap:2vw; padding:13px 0; border-bottom:1px solid var(--soft-line); }
 .publication:last-child { border-bottom:0; padding-bottom:0; }
-.publication h2,.thesis h2 { margin:0 0 8px; max-width:800px; font:400 clamp(21px,2.25vw,31px)/1.08 Georgia,serif; letter-spacing:-.025em; }
+.publication h2,.thesis h2 { margin:0 0 6px; max-width:800px; font:400 clamp(15px,1.6vw,22px)/1.15 Georgia,serif; letter-spacing:-.018em; }
 .publication p,.thesis p { margin:0; } .links { display:flex; flex-wrap:wrap; align-content:flex-start; justify-content:flex-end; gap:0 12px; text-transform:uppercase; }
-.other-entry h2 { font-size:clamp(20px,2vw,27px); } .other-entry a { color:var(--signal); }
+.other-entry a { color:var(--signal); }
+#talks .publication h2 { font-size:clamp(14px,1.35vw,19px); }
 .thesis { display:flex; justify-content:space-between; gap:24px; } .thesis .links { min-width:150px; }
 .footer { display:flex; justify-content:space-between; gap:20px; padding:18px 4vw; color:var(--faint); }
 .contact-links { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:0 16px; }
