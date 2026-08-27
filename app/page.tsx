@@ -58,7 +58,7 @@ const sections: { title: string; items: Item[] }[] = [
       {
         year: '2026',
         title: 'On the NLS hierarchy with nonzero boundary condition',
-        detail: 'PhD thesis · Karlsruhe Institute of Technology',
+        detail: 'PhD thesis under Xian Liao · Karlsruhe Institute of Technology',
         links: [{ label: 'KIT', href: 'https://www.waves.kit.edu/theses.php' }],
       },
       {
