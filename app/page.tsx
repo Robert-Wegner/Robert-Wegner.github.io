@@ -166,6 +166,7 @@ export default function Home() {
           <a href="mailto:robert.wegner@kit.edu">robert.wegner@kit.edu ↗</a>
           <a href="mailto:robert.wegner4@outlook.de">robert.wegner4@outlook.de ↗</a>
           <a href="https://github.com/Robert-Wegner">GitHub ↗</a>
+          <a href="https://scholar.google.com/citations?user=Ookm3iYAAAAJ&amp;hl=en&amp;oi=sra">Scholar ↗</a>
           <a href="https://www.waves.kit.edu/people_robertwegner.php">KIT ↗</a>
         </span>
       </footer>
