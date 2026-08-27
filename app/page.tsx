@@ -1,44 +1,75 @@
-type Publication = {
+type Item = {
   year: string;
   title: string;
   detail: string;
-  links: { label: string; href: string }[];
+  links?: { label: string; href: string }[];
 };
 
-const publications: Publication[] = [
+const sections: { title: string; items: Item[] }[] = [
   {
-    year: '2026',
-    title: 'Long-wave KdV hierarchy approximation of the NLS hierarchy with nonzero boundary conditions',
-    detail: 'Preprint · Robert Wegner',
-    links: [
-      { label: 'arXiv', href: 'https://arxiv.org/abs/2606.10687' },
-      { label: 'PDF', href: '/documents/wegner-2026-long-wave-kdv-nls.pdf' },
+    title: 'Publications',
+    items: [{
+      year: '2023',
+      title: 'Global-in-time well-posedness of the one-dimensional hydrodynamic Gross–Pitaevskii equations without vacuum',
+      detail: 'Z. Angew. Math. Phys. 74, 194 · Robert Wegner',
+      links: [
+        { label: 'arXiv', href: 'https://arxiv.org/abs/2303.04606' },
+        { label: 'PDF', href: '/documents/wegner-2023-hydrodynamic-gp.pdf' },
+        { label: 'KIT', href: 'https://publikationen.bibliothek.kit.edu/1000163619' },
+      ],
+    }],
+  },
+  {
+    title: 'Preprints',
+    items: [
+      {
+        year: '2026',
+        title: 'Long-wave KdV hierarchy approximation of the NLS hierarchy with nonzero boundary conditions',
+        detail: 'Preprint · Robert Wegner',
+        links: [
+          { label: 'arXiv', href: 'https://arxiv.org/abs/2606.10687' },
+          { label: 'PDF', href: '/documents/wegner-2026-long-wave-kdv-nls.pdf' },
+          { label: 'KIT', href: 'https://www.waves.kit.edu/downloads/CRC1173_Preprint_2026-36.pdf' },
+        ],
+      },
+      {
+        year: '2025',
+        title: 'Global well-posedness of the NLS hierarchy with nonzero boundary condition',
+        detail: 'Preprint · Xian Liao & Robert Wegner',
+        links: [
+          { label: 'arXiv', href: 'https://arxiv.org/abs/2508.14572' },
+          { label: 'PDF', href: '/documents/liao-wegner-2025-nls-hierarchy.pdf' },
+          { label: 'KIT', href: 'https://publikationen.bibliothek.kit.edu/1000195469' },
+        ],
+      },
     ],
   },
   {
-    year: '2025',
-    title: 'Global well-posedness of the NLS hierarchy with nonzero boundary condition',
-    detail: 'Preprint · Xian Liao & Robert Wegner',
-    links: [
-      { label: 'arXiv', href: 'https://arxiv.org/abs/2508.14572' },
-      { label: 'PDF', href: '/documents/liao-wegner-2025-nls-hierarchy.pdf' },
+    title: 'Theses',
+    items: [
+      {
+        year: '2026',
+        title: 'On the NLS hierarchy with nonzero boundary condition',
+        detail: 'PhD thesis · Karlsruhe Institute of Technology',
+        links: [{ label: 'KIT', href: 'https://www.waves.kit.edu/theses.php' }],
+      },
+      {
+        year: '2024',
+        title: 'On the Long-term Behavior of a Nonlinear Stochastic Wave Equation',
+        detail: 'Master’s thesis in Mathematics · University of Bonn',
+        links: [
+          { label: 'PDF', href: '/documents/wegner-master-thesis.pdf' },
+          { label: 'KIT', href: 'https://iana.math.kit.edu/downloads/iana2/Personen/master_thesis_robert_wegner.pdf' },
+        ],
+      },
     ],
   },
   {
-    year: '2023',
-    title: 'Global-in-time well-posedness of the one-dimensional hydrodynamic Gross–Pitaevskii equations without vacuum',
-    detail: 'Z. Angew. Math. Phys. 74, 194 · Robert Wegner',
-    links: [
-      { label: 'arXiv', href: 'https://arxiv.org/abs/2303.04606' },
-      { label: 'PDF', href: '/documents/wegner-2023-hydrodynamic-gp.pdf' },
-      { label: 'KIT', href: 'https://publikationen.bibliothek.kit.edu/1000163619' },
+    title: 'Other',
+    items: [
+      { year: '01', title: 'simPDE ↗', detail: 'A web app for simulating a range of partial differential equations.', links: [{ label: 'Visit', href: 'https://robert-wegner.github.io/simpde/' }] },
+      { year: '02', title: 'Quickdice ↗', detail: 'An Owlbear Rodeo extension for fast, command-style dice rolls.', links: [{ label: 'Visit', href: 'https://github.com/Robert-Wegner/quickdice' }] },
     ],
-  },
-  {
-    year: '2026',
-    title: 'On the NLS hierarchy with nonzero boundary condition',
-    detail: 'PhD thesis · Karlsruhe Institute of Technology',
-    links: [{ label: 'KIT', href: 'https://www.waves.kit.edu/theses.php' }],
   },
 ];
 
@@ -55,15 +86,14 @@ export default function Home() {
       </header>
 
       <section className="intro" id="top">
-        <p className="kicker">Karlsruhe Institute of Technology · Institute for Analysis</p>
         <h1>Robert Wegner</h1>
-        <p className="role">PhD · Postdoctoral researcher</p>
+        <p className="role">Postdoctoral researcher · Institute for Analysis, Karlsruhe Institute of Technology</p>
       </section>
 
       <section className="section" id="research">
         <p className="section-label">Research</p>
         <div className="copy">
-          <p>I work on dispersive, completely integrable, and stochastic partial differential equations.</p>
+          <p>My work aims to improve our understanding of the long-term behavior of dispersive, completely integrable, and stochastic nonlinear partial differential equations.</p>
           <p className="muted">Collaborative Research Center 1173 · Project A12: Dynamics of the Gross–Pitaevskii equation and related dispersive equations.</p>
         </div>
       </section>
@@ -71,38 +101,24 @@ export default function Home() {
       <section className="section" id="publications">
         <p className="section-label">Publications</p>
         <div className="publication-list">
-          {publications.map((publication) => (
-            <article className="publication" key={publication.title}>
-              <span className="year">{publication.year}</span>
-              <div>
-                <h2>{publication.title}</h2>
-                <p>{publication.detail}</p>
-              </div>
-              <div className="links">
-                {publication.links.map((link) => <a key={link.href} href={link.href}>{link.label} ↗</a>)}
-              </div>
-            </article>
+          {sections.map((section) => (
+            <div key={section.title}>
+              <h2 className="category">{section.title}</h2>
+              {section.items.map((item) => (
+                <article className={`publication${section.title === 'Other' ? ' other-entry' : ''}`} key={item.title}>
+                  <span className="year">{item.year}</span>
+                  <div><h2>{item.title}</h2><p>{item.detail}</p></div>
+                  {item.links && <div className="links">{item.links.map((link) => <a key={link.href} href={link.href}>{link.label} ↗</a>)}</div>}
+                </article>
+              ))}
+            </div>
           ))}
-        </div>
-      </section>
-
-      <section className="section" id="downloads">
-        <p className="section-label">Thesis</p>
-        <div className="copy thesis">
-          <div>
-            <h2>On the Long-term Behavior of a Nonlinear Stochastic Wave Equation</h2>
-            <p>Master’s thesis in Mathematics · University of Bonn · 2024</p>
-          </div>
-          <div className="links">
-            <a href="/documents/wegner-master-thesis.pdf">Download PDF ↗</a>
-            <a href="https://iana.math.kit.edu/downloads/iana2/Personen/master_thesis_robert_wegner.pdf">KIT source ↗</a>
-          </div>
         </div>
       </section>
 
       <footer className="footer" id="contact">
         <span>Robert Wegner · KIT · Karlsruhe</span>
-        <a href="mailto:robert.wegner@kit.edu">robert.wegner@kit.edu ↗</a>
+        <a href="mailto:robert.wegner4@outlook.de">robert.wegner4@outlook.de ↗</a>
       </footer>
     </main>
   );
