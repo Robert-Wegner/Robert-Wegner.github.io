@@ -72,6 +72,15 @@ const projects: Item[] = [
   { year: '03', title: 'Steiner symmetrization ↗', detail: 'An interactive page for exploring Steiner symmetrization.', links: [{ label: 'Visit', href: 'https://robert-wegner.github.io/steiner-symmetrization/' }] },
 ];
 
+const talks: Item[] = [
+  { year: 'Jul 2026', title: 'Long-wave KdV hierarchy approximation of the NLS hierarchy with nonzero boundary conditions', detail: 'Athens · AIMS Conference' },
+  { year: 'Dec 2025', title: 'On the structure of the NLS hierarchy', detail: 'Dalian · Mini-course' },
+  { year: 'Mar 2025', title: 'Long-wave approximation of the NLS hierarchy with nonzero boundary data by the KdV hierarchy', detail: 'Karlsruhe · Conference on Mathematics of Wave Phenomena' },
+  { year: 'Jun 2024', title: 'Global well-posedness of the one-dimensional hydrodynamic Gross–Pitaevskii equations without vacuum', detail: 'Karlstad · Equadiff' },
+  { year: 'May 2024', title: 'Well-posedness and long-wave KdV approximation of hydrodynamic Gross–Pitaevskii equations', detail: 'Stuttgart · Oberseminar Nichtlineare Differentialgleichungen' },
+  { year: 'Feb 2024', title: 'Hamiltonian studies on counter-propagating water waves', detail: 'Bad Teinach · Scientific Retreat' },
+];
+
 export default function Home() {
   return (
     <main>
@@ -80,6 +89,7 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
+          <a href="#talks">Talks</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -111,6 +121,18 @@ export default function Home() {
                 </article>
               ))}
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="talks">
+        <p className="section-label">Talks</p>
+        <div className="publication-list">
+          {talks.map((talk) => (
+            <article className="publication" key={`${talk.year}-${talk.title}`}>
+              <span className="year">{talk.year}</span>
+              <div><h2>{talk.title}</h2><p>{talk.detail}</p></div>
+            </article>
           ))}
         </div>
       </section>
