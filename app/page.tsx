@@ -48,8 +48,8 @@ const sections: { title: string; items: Item[] }[] = [
     title: 'Upcoming',
     items: [{
       year: 'Soon',
-      title: 'On the boundedness and continuity of ψ ↦ |ψ|⁻¹ᐟ²∇ψ',
-      detail: 'Forthcoming preprint · L.-E. Hientzsch, R. Scandone & Robert Wegner',
+      title: 'On the boundedness and continuity of |ψ|⁻¹ψ̄∇ψ',
+      detail: 'Forthcoming preprint · Lars Eric Hientzsch, Raffaele Scandone & Robert Wegner',
     }],
   },
   {
