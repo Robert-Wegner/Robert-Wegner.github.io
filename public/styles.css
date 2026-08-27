@@ -13,6 +13,7 @@ h1 { margin:0; font:400 clamp(28px,2.8vw,36px)/1 Georgia,'Times New Roman',serif
 .section-label { margin:0; padding:16px 4vw; border-right:1px solid var(--line); text-transform:uppercase; letter-spacing:.08em; }
 .copy,.publication-list { padding:24px 7vw 28px 5vw; }
 .copy>p { max-width:760px; margin:0; font:400 clamp(15px,1.6vw,22px)/1.15 Georgia,serif; letter-spacing:-.018em; } .copy>p+p { margin-top:1rem; }
+.copy>p.muted { font:13px/1.5 'Courier New',monospace; letter-spacing:0; }
 .muted,.publication p,.thesis p { color:var(--faint); }
 .category { margin:28px 0 10px; font:700 13px/1.5 'Courier New',monospace; letter-spacing:.08em; text-transform:uppercase; color:var(--signal); }
 .category:first-child { margin-top:0; }
