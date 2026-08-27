@@ -129,8 +129,11 @@ export default function Home() {
       </section>
 
       <footer className="footer" id="contact">
-        <span>Robert Wegner · KIT · Karlsruhe</span>
-        <a href="mailto:robert.wegner4@outlook.de">robert.wegner4@outlook.de ↗</a>
+        <span>Robert Wegner · Karlsruhe</span>
+        <span className="contact-links">
+          <a href="mailto:robert.wegner@kit.edu">robert.wegner@kit.edu ↗</a>
+          <a href="mailto:robert.wegner4@outlook.de">robert.wegner4@outlook.de ↗</a>
+        </span>
       </footer>
     </main>
   );
