@@ -1,4 +1,4 @@
-:root { --paper:#e7eeea; --ink:#15221d; --faint:#52665d; --signal:#b9412e; --line:#21372e; --soft-line:#aabbb2; }
+:root { --paper:#eef1ed; --ink:#15221d; --faint:#40544b; --signal:#b9412e; --line:#21372e; --soft-line:#aabbb2; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
