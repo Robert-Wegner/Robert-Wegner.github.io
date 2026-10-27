@@ -24,6 +24,15 @@ const sections: { title: string; items: Item[] }[] = [
     items: [
       {
         year: '2026',
+        title: 'Boundedness and continuity of phase-corrected gradients on Sobolev spaces',
+        detail: 'Preprint · Lars Eric Hientzsch, Raffaele Scandone & Robert Wegner',
+        links: [
+          { label: 'arXiv', href: 'https://arxiv.org/abs/2610.35584' },
+          { label: 'PDF', href: 'https://arxiv.org/pdf/2610.35584' },
+        ],
+      },
+      {
+        year: '2026',
         title: 'Long-wave KdV hierarchy approximation of the NLS hierarchy with nonzero boundary conditions',
         detail: 'Preprint · Robert Wegner',
         links: [
@@ -43,14 +52,6 @@ const sections: { title: string; items: Item[] }[] = [
         ],
       },
     ],
-  },
-  {
-    title: 'Upcoming',
-    items: [{
-      year: 'Soon',
-      title: 'On the boundedness and continuity of |ψ|⁻¹ψ̄∇ψ',
-      detail: 'Forthcoming preprint · Lars Eric Hientzsch, Raffaele Scandone & Robert Wegner',
-    }],
   },
   {
     title: 'Theses',
